@@ -10,11 +10,11 @@ const app = express();
 
 // Connect to the database
 connectDB();
-// app.use(
-//   cors({
-//     origin: "https://user-service-ajve.onrender.com/api/users",
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://user-information-glp4.onrender.com/api/users",
+  })
+);
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "public")));
